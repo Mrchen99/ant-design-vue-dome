@@ -6,7 +6,7 @@ import '@/components/NProgress/nprogress.less' // progress bar custom style
 import notification from 'ant-design-vue/es/notification'
 import { setDocumentTitle, domTitle } from '@/utils/domUtil'
 import { ACCESS_TOKEN } from '@/store/mutation-types'
-import { i18nRender } from '@/locales'
+// import { i18nRender } from '@/locales'
 
 NProgress.configure({ showSpinner: false }) // NProgress Configuration
 
@@ -16,7 +16,7 @@ const defaultRoutePath = '/dashboard/workplace'
 
 router.beforeEach((to, from, next) => {
   NProgress.start() // start progress bar
-  to.meta && typeof to.meta.title !== 'undefined' && setDocumentTitle(`${i18nRender(to.meta.title)} - ${domTitle}`)
+  to.meta && typeof to.meta.title !== 'undefined' && setDocumentTitle(`${domTitle}`)
   /* has token */
   const token = storage.get(ACCESS_TOKEN)
   if (token) {
