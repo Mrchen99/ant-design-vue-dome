@@ -13,6 +13,7 @@ const constantRouterComponents = {
   '403': () => import(/* webpackChunkName: "error" */ '@/views/exception/403'),
   '404': () => import(/* webpackChunkName: "error" */ '@/views/exception/404'),
   '500': () => import(/* webpackChunkName: "error" */ '@/views/exception/500'),
+  Home: () => import('@/views/index/Home'),
 
   // 你需要动态引入的页面组件
   Workplace: () => import('@/views/dashboard/Workplace'),
@@ -76,7 +77,7 @@ const rootRouter = {
   name: 'index',
   path: '',
   component: 'BasicLayout',
-  redirect: '/dashboard',
+  redirect: '/index',
   meta: {
     title: '首页'
   },

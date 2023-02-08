@@ -1,6 +1,8 @@
 export default {
     'menu.welcome': '欢迎',
     'menu.home': '主页',
+    'menu.index': '首页',
+    'menu.index.home': '首页',
     'menu.dashboard': '仪表盘',
     'menu.dashboard.analysis': '分析页',
     'menu.dashboard.monitor': '监控页',

@@ -9,7 +9,7 @@ export default {
       pages: [],
       activeKey: '',
       newTabIndex: 0,
-      fixedUrl: '/dashboard/workplace'
+      fixedUrl: '/index/home'
     }
   },
   created () {

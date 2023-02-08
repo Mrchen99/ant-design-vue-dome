@@ -474,6 +474,29 @@ const info = options => {
  */
 const userNav = options => {
   const nav = [
+    // index
+    {
+      name: 'index',
+      parentId: 0,
+      id: 1414,
+      meta: {
+        icon: 'home-outlined',
+        title: 'menu.index',
+        show: true
+      },
+      component: 'index',
+      redirect: '/index/home'
+    },
+    {
+      name: 'home',
+      parentId: 1414,
+      id: 1415,
+      meta: {
+        title: 'menu.index.home',
+        show: true
+      },
+      component: 'Home'
+    },
     // dashboard
     {
       name: 'dashboard',
