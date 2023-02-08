@@ -87,7 +87,7 @@ export default {
       menus: [],
       // 侧栏收起状态
       collapsed: false,
-      title: defaultSettings.title,
+      title: '郑州大学第一附属医院',
       settings: {
         // 布局类型
         layout: defaultSettings.layout, // 'sidemenu', 'topmenu'
@@ -193,4 +193,42 @@ export default {
 
 <style lang="less">
 @import "./BasicLayout.less";
+.ant-pro-sider-menu-logo {
+  height: 120px;
+  line-height: initial;
+  padding-left: 0 !important;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    opacity: 1;
+    margin: 10px 0 0 0;
+    white-space: nowrap;
+    transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+}
+
+//侧边栏收起状态
+.ant-layout-sider-collapsed {
+  .ant-pro-sider-menu-logo {
+    padding-left: 0 !important;
+
+    div {
+      flex-direction: row;
+    }
+
+    h1 {
+      opacity: 0;
+      max-width: 0;
+      transition: all 0.2s;
+    }
+  }
+}
 </style>
